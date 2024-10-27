@@ -12,7 +12,9 @@ app.get('/checkout', async (req, res) => {
     const response = await circuitBreaker.fire(paymentDetails);
     res.status(200).send(response);
   } catch (err) {
-    res.redirect('http://localhost:8080/410.html');
+    // res.redirect('http://error-pages/410.html');
+
+    res.redirect('https://terrible-ghost-rw54r57vgx9hp9r7-8080.app.github.dev');
   }
 });
 
